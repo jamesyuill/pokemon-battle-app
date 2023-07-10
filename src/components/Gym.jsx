@@ -10,10 +10,10 @@ const [ isLoading, setIsLoading ] = useState(true)
 
 //User Pokemon ----------------------------------
 const [ userPokemon, setUserPokemon ] = useState('')
-console.log(newPokemonSearch, '<---new pokemon search')
 useEffect(()=>{
     axios.get(`https://pokeapi.co/api/v2/pokemon/${newPokemonSearch}`)
     .then(({data})=>{
+        console.log(data)
         console.log(data.name)
         setUserPokemon(data)
         setIsLoading(false)
@@ -21,7 +21,7 @@ useEffect(()=>{
         console.log(err, '<---userPokemon error')
         setIsError(true)
     })
-}, [newPokemonSearch])
+}, [])
 
 //Computer Pokemon ----------------------------------
 const [ compPokemon, setCompPokemon ] = useState([])

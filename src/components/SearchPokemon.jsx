@@ -9,14 +9,15 @@ const SearchPokemon = ({ newPokemonSearch, setNewPokemonSearch })=>{
 
 
 function handleSubmit(event){
+    setNewPokemonSearch(newPokemonSearch)
+    console.log(newPokemonSearch, 'handleSubmit newPokemonSearch')
     event.preventDefault()
-    // setNewPokemonSearch(event.target.value)
 }
 
 
     return <form id="search-pokemon" onSubmit={handleSubmit}>
         <label htmlFor="search">pokémon: </label>
-        <input id="search" type="text" value={newPokemonSearch} onChange={handleChange}></input>
+        <input name="searchpokemon" id="search" type="text" value={newPokemonSearch} onChange={handleChange}></input>
         <button>search!</button>
     </form>
 }
