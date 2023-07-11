@@ -155,13 +155,12 @@ footer{
 }
 
 #popup{
-  position: absolute;
+  position:absolute;
   background-color: rgb(247, 138, 247);
   width: 300px;
-  left: 40px;
+  left:10%;
   display: block;
   font-size: 40px;
   box-shadow: 2px 2px 2px black;
-  
   z-index: 2;
 }

@@ -12,7 +12,7 @@ const [ currentInput, setCurrentInput ] = useState('')
 
 
 function handleSubmit(event){
-    setNewPokemonSearch(currentInput)
+    setNewPokemonSearch(currentInput || 'mew')
     event.preventDefault()
     setCurrentInput('')
 }
