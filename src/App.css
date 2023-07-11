@@ -10,6 +10,7 @@
 
 .header{
   font-size:smaller;
+  border-bottom: 2px dashed black;
   
 }
 
@@ -19,9 +20,39 @@ h1{
 }
 
 .header-p{
-  font-size: small;
+  font-size:large;
   font-weight: bold;
+  margin:5px;
   
+}
+.search-pokemon{
+  margin-top: 10px;
+  font-size: large;
+
+}
+
+#search{
+  font-size: large;
+}
+
+.search-button{
+  background-color: rgb(165, 193, 255);
+  height:30px;
+  padding:5px;
+  width:80px;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.search-button:hover{
+  background-color:  rgb(255, 170, 170);
+}
+
+.instructions{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px dashed black;
 }
 
 .gym-div{
@@ -29,9 +60,10 @@ h1{
   flex-direction: row;
   background-color: rgb(225, 250, 249);
   margin-top: 5px;
-  padding: 20px;
+  padding: 10px;
   gap:10px;
   justify-content: space-around;
+  
 }
 
 h2{
@@ -89,6 +121,47 @@ img{
   transform: skew(15deg,-15deg)
 }
 
-.search-button{
+.reveal-stats-btn{
+  background-color: rgb(165, 193, 255);
+  height:30px;
   
+  line-height: 0px;
+  vertical-align: middle;
+}
+
+.reveal-stats-btn:hover{
+  background-color:  rgb(255, 170, 170);
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  padding-top:10px ;
+  gap:10px;
+  width:fit-content;
+  margin:0 auto;
+}
+
+.new-battle-btn{
+  background-color: rgb(165, 193, 255);
+  height:30px;
+  
+  line-height: 0px;
+  vertical-align: middle;
+}
+
+.new-battle-btn:hover{
+  background-color:  rgb(255, 170, 170);
+}
+
+#popup{
+  position: absolute;
+  background-color: rgb(247, 138, 247);
+  width: 300px;
+  left: 40px;
+  display: block;
+  font-size: 40px;
+  box-shadow: 2px 2px 2px black;
+  
+  z-index: 2;
 }

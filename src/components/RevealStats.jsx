@@ -1,4 +1,8 @@
-const RevealStatsBtn = ({revealStats, setRevealStats })=>{
+
+
+const RevealStatsBtn = ({ revealStats, setRevealStats })=>{
+
+
     function handleClick(){
         if (revealStats) {
             setRevealStats(false)

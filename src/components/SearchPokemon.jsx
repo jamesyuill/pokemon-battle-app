@@ -13,13 +13,12 @@ const [ currentInput, setCurrentInput ] = useState('')
 
 function handleSubmit(event){
     setNewPokemonSearch(currentInput)
-    console.log(newPokemonSearch, 'handleSubmit newPokemonSearch')
     event.preventDefault()
     setCurrentInput('')
 }
 
 
-    return <form id="search-pokemon" onSubmit={handleSubmit}>
+    return <form className="search-pokemon" id="search-pokemon" onSubmit={handleSubmit}>
         <label htmlFor="search">pokémon: </label>
         <input name="searchpokemon" id="search" type="text" value={currentInput} onChange={handleChange}></input>
         <button className='search-button'>search!</button>

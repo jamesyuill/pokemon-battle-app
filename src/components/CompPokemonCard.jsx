@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import compareResults from '../utils/compareResults.js'
 
-const CompPokemonCard = ({revealStats})=>{
+const CompPokemonCard = ({userWeight, compWeight, setCompWeight , revealStats})=>{
     const [ isError, setIsError ] = useState(false)
     const [ isLoading, setIsLoading ] = useState(true)
  
@@ -12,8 +13,8 @@ const randomPokemon = Math.round(Math.random() * 1000)
 useEffect(()=>{
     axios.get(`https://pokeapi.co/api/v2/pokemon/${randomPokemon}`)
     .then(({data})=>{
-        console.log(data, '<--Comp Choice')
         setCompPokemon(data)
+        setCompWeight(data.weight)
         setIsLoading(false)
     }).catch((err)=>{
         console.log(err, '<---compPokemon error')
@@ -31,15 +32,17 @@ if (isLoading) {
 
 const compPokemonImageURL = compPokemon.sprites.other.dream_world.front_default
 const name = compPokemon.name
-const weight = compPokemon.weight
-const height = compPokemon.height
 const weightTag = document.getElementById('comp-weight')
-// const heightTag = document.getElementById('comp-height')
+
+
 
 
     if (revealStats) {
-        weightTag.innerText = `I weigh ${weight}kg`
-        // heightTag.innerText = `height: ${height}ft`
+        weightTag.innerText = `I weigh ${compWeight}kg`
+        console.log(userWeight,'<--user', compWeight,'<--comp')
+        setTimeout(()=>{
+            compareResults(userWeight, compWeight)
+        }, 2000)
     } else {
         
     }
