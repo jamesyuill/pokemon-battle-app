@@ -1,23 +1,27 @@
+import { useState } from 'react'
 
 
 
 const SearchPokemon = ({ newPokemonSearch, setNewPokemonSearch })=>{
 
+const [ currentInput, setCurrentInput ] = useState('')
+
     function handleChange(event){
-        setNewPokemonSearch(event.target.value)
+        setCurrentInput(event.target.value)
     }
 
 
 function handleSubmit(event){
-    setNewPokemonSearch(newPokemonSearch)
+    setNewPokemonSearch(currentInput)
     console.log(newPokemonSearch, 'handleSubmit newPokemonSearch')
     event.preventDefault()
+    setCurrentInput('')
 }
 
 
     return <form id="search-pokemon" onSubmit={handleSubmit}>
         <label htmlFor="search">pokémon: </label>
-        <input name="searchpokemon" id="search" type="text" value={newPokemonSearch} onChange={handleChange}></input>
+        <input name="searchpokemon" id="search" type="text" value={currentInput} onChange={handleChange}></input>
         <button>search!</button>
     </form>
 }

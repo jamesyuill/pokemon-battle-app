@@ -1,7 +1,7 @@
 #root {
-  max-width: 100vw;
+  width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
+  
   text-align: center;
 }
 
@@ -21,16 +21,20 @@
 
 h3{
   font-size: smaller;
+  text-transform: capitalize;
 }
 
 .user-card{
   background-color: rgb(165, 193, 255);
   padding: 10px;
+  width:200px;
 }
+
 
 .comp-card{
   background-color: rgb(255, 170, 170);
   padding: 10px;
+  width:200px;
 }
 
 img{
@@ -38,4 +42,13 @@ img{
   height:6em;
   padding:10px;
   border: 2px solid black;
+}
+
+.versus{
+  position: absolute;
+  font-size:3rem;
+  color: orange;
+  z-index: 1;
+  text-shadow: 2px 2px 2px black;
+  transform: skew(15deg,-15deg)
 }

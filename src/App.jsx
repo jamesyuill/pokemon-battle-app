@@ -7,7 +7,7 @@ import { useState } from 'react';
 function App() {
 
 
-  const [ newPokemonSearch, setNewPokemonSearch] = useState('')
+  const [ newPokemonSearch, setNewPokemonSearch] = useState('mew')
 
 
 
