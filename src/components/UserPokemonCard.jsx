@@ -35,13 +35,15 @@ if (isLoading) {
 
 const userPokemonImageURL = userPokemon.sprites.other.dream_world.front_default
 const weight = userPokemon.weight
+const height = userPokemon.height
 const name = userPokemon.name
 
     return <div id="user-card" className='user-card'>
-        <h3>{name}</h3>
-
+        <h2>{name}</h2>
+        <p className='card-p'>your pokemon</p>
         <img src={userPokemonImageURL}></img>
-        <p>{name} has a weight of {weight}</p>
+        <p className='cardweight-p'>I weigh precisely {weight}kg</p>
+        {/* <p className='card-p'>height: {height}ft</p> */}
     </div>
 }
 

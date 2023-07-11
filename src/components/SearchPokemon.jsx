@@ -22,7 +22,7 @@ function handleSubmit(event){
     return <form id="search-pokemon" onSubmit={handleSubmit}>
         <label htmlFor="search">pokémon: </label>
         <input name="searchpokemon" id="search" type="text" value={currentInput} onChange={handleChange}></input>
-        <button>search!</button>
+        <button className='search-button'>search!</button>
     </form>
 }
 
